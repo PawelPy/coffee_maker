@@ -7,7 +7,6 @@ public class Main {
         Resource mleko = new Resource("mleko");
         Resource woda = new Resource("woda");
 
-
         Map<Resource, Integer> fullResourceStatus = new HashMap<>();
         fullResourceStatus.put(kawa, 10);
         fullResourceStatus.put(mleko, 5);
@@ -20,6 +19,7 @@ public class Main {
         Beverage hotMilk = new Beverage("Gorące mleko", 0, 3, 0);
         Beverage hotMilkLarge = new Beverage("Gorące mleko large", 0, 5, 0);
         Beverage espressoDoppio = new Beverage("Espresso Doppio", 4, 0, 2);
+        Beverage espressoRistretto = new Beverage("Espresso Ristretto", 2, 0, 1);
 
         Map<Integer, Beverage> beverageMenu = new HashMap<>();
         beverageMenu.put(1, espresso);
@@ -28,7 +28,8 @@ public class Main {
         beverageMenu.put(4, hotMilk);
         beverageMenu.put(5, hotMilkLarge);
         beverageMenu.put(6, espressoDoppio);
-        
+        beverageMenu.put(7, espressoRistretto);
+
         Device.readyForAction(kawa, mleko, woda, fullResourceStatus, beverageMenu);
     }
 
